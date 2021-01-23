@@ -1,23 +1,31 @@
 import React, { useState } from 'react';
+import { ConverterInput } from './ConverterInput';
 
 function App() {
   const [value, setValue] = useState('');
+  const [type, setType] = useState('number');
 
-  const handleChange = e => {
-    if (!isNaN(e.target.value)) {
-      setValue(e.target.value)
+  const handleChange = ({ target }) => {
+    const { value, name } = target;
+    if (!isNaN(value)) {
+      setValue(value);
+      setType(name);
     }
   };
 
   return (
     <div className="App">
-      <input
+      <ConverterInput
         value={value}
         onChange={handleChange}
+        type={type}
+        name="number"
       />
-      <input
+      <ConverterInput
         value={value}
         onChange={handleChange}
+        type={type}
+        name="binary"
       />
     </div>
   );
