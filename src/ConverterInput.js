@@ -1,5 +1,5 @@
 import React from 'react';
-import converterDecBinary from './converterDecBinary';
+import converterDecBinary from './helpers/converterDecBinary';
 
 export function ConverterInput({ value, type, name, onChange }) {
   const inputValue = !value || type === name

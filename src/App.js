@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ConverterInput } from './ConverterInput';
-import validation from './validation';
+import validation from './helpers/validation';
 
 function App() {
   const [value, setValue] = useState('');
