@@ -1,16 +1,21 @@
 import React from 'react';
 import converterDecBinary from './converterDecBinary';
 
-export function ConverterInput(props) {
-  const value = !props.value || props.type === props.name
-    ? props.value
-    : converterDecBinary(props.value, props.name);
+export function ConverterInput({ value, type, name, onChange }) {
+  const inputValue = !value || type === name
+    ? value
+    : converterDecBinary(value, name);
 
   return (
-    <input
-      value={value}
-      onChange={props.onChange}
-      name={props.name}
-    />
+    <>
+      <label htmlFor={name}>{name}</label>
+      <input
+        id={name}
+        value={inputValue}
+        onChange={onChange}
+        name={name}
+        autoComplete="off"
+      />
+    </>
   )
 } 
