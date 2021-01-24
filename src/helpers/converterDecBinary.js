@@ -1,14 +1,14 @@
 export default function converterDecBinary(num, convert) {
   let bin = '';
   if (convert === 'binary') {
-    let dividendo = num;
+    let dividend = num;
     let result;
 
     if (num === '0') return 0;
 
-    while (dividendo >= 1) {
-      bin += dividendo % 2;
-      dividendo = Math.floor(dividendo / 2);
+    while (dividend >= 1) {
+      bin += dividend % 2;
+      dividend = Math.floor(dividend / 2);
     }
 
     result = bin.split('').reverse().join('');

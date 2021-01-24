@@ -22,7 +22,8 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="content">
+      <h2 className="title">Conversor de Decimal para Binário</h2>
       <ConverterInput
         value={value}
         onChange={handleChange}
@@ -37,7 +38,7 @@ function App() {
       />
 
       {showMessage &&
-        <div>{message}</div>
+        <div className="warning">{message}</div>
       }
     </div>
   );

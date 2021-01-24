@@ -2,7 +2,7 @@ export default function validation(value, type) {
   let message = '';
   let isValid = true;
 
-  if (isNaN(value)) {
+  if (isNaN(value) || value.includes('.')) {
     message = 'Por favor digite apenas números!';
     isValid = false;
   } else if (type === 'binary') {
