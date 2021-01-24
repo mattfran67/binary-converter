@@ -3,7 +3,7 @@ import { ConverterInput } from './ConverterInput';
 
 function App() {
   const [value, setValue] = useState('');
-  const [type, setType] = useState('number');
+  const [type, setType] = useState('decimal');
 
   const handleChange = ({ target }) => {
     const { value, name } = target;
@@ -19,7 +19,7 @@ function App() {
         value={value}
         onChange={handleChange}
         type={type}
-        name="number"
+        name="decimal"
       />
       <ConverterInput
         value={value}
